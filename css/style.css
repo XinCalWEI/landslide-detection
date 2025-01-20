@@ -146,7 +146,7 @@ h1, h2 {
     font-size: 1.2em;
 }
 
-img {
+.staff-content img {
     width: 150px;
     height: 150px;
     object-fit: cover;

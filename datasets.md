@@ -13,67 +13,26 @@ title: Datasets
         <area shape="circle" coords="337,300,44" alt="" href="">
     </map>
     <br> Datasets:
-    <br> TODO: Add papers
+    {% for dataset in site.data.dataset %}
     <details>
-        <summary>CAS Landslide Dataset</summary>
-        
-        <a href="https://zenodo.org/records/10294997">Link to Download</a>
-        <a href="https://www.nature.com/articles/s41597-023-02847-z">Link to Paper</a>
+        <summary>{{ dataset.title }}</summary>
+        <p> {{ dataset.description }} </p>
+        {% if dataset.linkDownload != "Upon Request" %}
+            <a href="{{ dataset.linkDownload }}">Link to Download</a>
+        {% else %}
+            <a>Upon Request to Author</a>
+        {% endif %}
+        {% if dataset.linkPaper %}
+            <a href="{{ dataset.linkPaper }}"> Link to a Paper Using Dataset</a>
+        {% endif %}
         <ul>
-            <li>img, label, and mask </li>
-            <li>TIFF format; 512 × 512 pixels </li>
-            <li>integrating satellite and unmanned aerial vehicle data from nine regions (specifies region) </li>
+            {% for other in dataset.other %}
+            <li>{{ other }}</li>
+            {% endfor %}
         </ul>
-    
     </details>
+    {% endfor %}
 
-    <details>
-        <summary>HR-GLDD: Global Dataset</summary>
-        
-        <a href="https://zenodo.org/records/7189381">Link to Download</a>
-        <ul>
-            <li>Split for test, train, and val </li>
-            <li>Npy format </li>
-            <li>rainfall triggered and five earthquake-triggered multiple landslide events </li>
-        </ul>
-    
-    </details>
-
-    <details>
-        <summary>Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection</summary>
-        
-        <a href="https://zenodo.org/records/10463239">Link to Download</a>
-        <ul>
-            <li>Split for test, train, and val </li>
-            <li>pytorch </li>
-            <li>multi-source satellite remote sensing imagery </li>
-        </ul>
-    
-    </details>
-
-     <details>
-        <summary>GDCLD: Global Dataset of Coesismic Landslude Mapping</summary>
-        
-        <a href="https://zenodo.org/records/13612636">Link to Download</a>
-        <ul>
-            <li>Split for test, train, and val </li>
-            <li>TIFF format</li>
-            <li>coseismic landslide mapping via multi-source high-resolution remote sensing images </li>
-        </ul>
- 
-    </details>
-
-    <details>
-        <summary>Monsoon Triggered Landslides in Nepal</summary>
-        
-        <a href="https://zenodo.org/records/7970874">Link to Download</a>
-        <ul>
-            <li>Separated by year (2015, 2017, 2018 and 2019) </li>
-            <li>csv </li>
-            <li>includes timings constrained by Sentinel-1 time series; landslide polygons were mapped by comparing pre- and post-monsoon Landsat-8 images</li>
-        </ul>
-    
-    </details>
 
    
 </main>

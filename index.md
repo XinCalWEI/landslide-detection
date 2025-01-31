@@ -15,9 +15,9 @@ title: About
 
     <h3>1/31/2025</h3>
     <ul>
-        <li>see great lakes storage storage</li>
-        <li>split datasets and fill out table</li>
-        <li></li>
+        <li>Look at great lakes umich for storage</li>
+        <li>Split datasets and fill out table</li>
+        <li>Do the model tutorial and come up with ideas for building our own model</li>
     <ul>
 
     <h3>2/2025</h3>

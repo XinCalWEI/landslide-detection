@@ -14,6 +14,11 @@ title: About
     </ul>
 
     <h3>1/31/2025</h3>
+    <ul>
+        <li>see great lakes storage storage</li>
+        <li>split datasets and fill out table</li>
+        <li></li>
+    <ul>
 
     <h3>2/2025</h3>
     <p>Goal: Train own model using our datasets and fine-tuning our model using limited datasets</p>
@@ -23,5 +28,7 @@ title: About
     <ul>
         <li>Datasets -> Interactive Map Feature</li>
         <li>Dots that mark which places we have datasets for. Click to redirect</li>
+        <li>Have a place for people to submit ther idataset to be added to website</li>
+        <li>Python package</li>
     </ul>
 </main>

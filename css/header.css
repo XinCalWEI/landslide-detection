@@ -1,0 +1,88 @@
+header {
+    background-color: #3B3321;
+    color: white;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+/* Transparent header on main page */
+.transparent-header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Ensure the header content aligns with the normal header */
+.transparent-header .header-container {
+    max-width: 100vw;
+    margin: 0 auto; 
+    padding-left: 30px; 
+    padding-right: 20px;
+}
+
+.transparent-header h1 a,
+.transparent-header nav ul li a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Change background on scroll */
+.scrolled {
+    background-color: rgba(59, 51, 33, 0.9);
+    transition: background-color 0.3s ease-in-out;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 1.25rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}

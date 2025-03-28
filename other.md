@@ -3,4 +3,58 @@ layout: default
 title: Other
 ---
 
-# Placeholder
+<main>
+    <h2>TODO</h2>
+    <h3>1/17/2025</h3>
+    <ul>
+        <li>Collect More Refined Datasets (20-30 countries)</li>
+        <li>Dataset Website (description, dropdown with links)</li>
+        <li>Look at tutorial -> reproduce code</li>
+    </ul>
+
+    <h3>1/31/2025</h3>
+    <ul>
+        <li>Look at great lakes umich for storage</li>
+        <li>Split datasets and fill out table</li>
+        <li>Do the model tutorial and come up with ideas for building our own model</li>
+    </ul>
+
+    <h3>2/28/2025</h3>
+    <ul>
+        <li>Look at great lakes umich for storage</li>
+        <li>Split datasets and fill out table</li>
+        <li>Do the model tutorial and come up with ideas for building our own model</li>
+    </ul>
+
+    <h3>3/21/2025</h3>
+    <ul>
+        <li> Website TODO
+            <ul>
+                <li>Update About Page w/ Images & abstract once approved</li>
+                <li>Edit the dataset page to be dynamic - add excel link too </li>
+                <li>Clean up about page and put info</li>
+                <li>Upload Your Own Data - Email/Form/Access to upload dataset w/ questions</li>
+                <li>Add partners section</li>
+                <li>Add recent seminar</li>
+                <li>Come up with title???</li>
+            </ul>
+        </li>
+        <li>Reproduce it on own device instead of google colab</li>
+        <li>TODO: look at anaconda</li>
+        <li>TODO: Write abstract for research poster</li>
+    </ul>
+
+    <h3>2/2025</h3>
+    <p>Goal: Train own model using our datasets and fine-tuning our model using limited datasets</p>
+    <p></p>
+
+
+    <h3>Future Implementations</h3>
+    <ul>
+        <li>Datasets -> Interactive Map Feature</li>
+        <li>Dots that mark which places we have datasets for. Click to redirect</li>
+        <li>Have a place for people to submit ther idataset to be added to website</li>
+        <li>Python package</li>
+    </ul>
+</main>
+

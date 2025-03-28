@@ -3,58 +3,87 @@ layout: default
 title: About
 ---
 
+<head>
+</head>
+
 <main>
-    <h1>About Our Project</h1>
-    <h2>TODO</h2>
-    <h3>1/17/2025</h3>
-    <ul>
-        <li>Collect More Refined Datasets (20-30 countries)</li>
-        <li>Dataset Website (description, dropdown with links)</li>
-        <li>Look at tutorial -> reproduce code</li>
-    </ul>
-
-    <h3>1/31/2025</h3>
-    <ul>
-        <li>Look at great lakes umich for storage</li>
-        <li>Split datasets and fill out table</li>
-        <li>Do the model tutorial and come up with ideas for building our own model</li>
-    <ul>
-
-    <h3>2/28/2025</h3>
-    <ul>
-        <li>Look at great lakes umich for storage</li>
-        <li>Split datasets and fill out table</li>
-        <li>Do the model tutorial and come up with ideas for building our own model</li>
-    <ul>
-
-    <h3>3/21/2025</h3>
-    <ul>
-        <li> Website TODO
-            <ul>
-                <li>Update About Page w/ Images & abstract once approved</li>
-                <li>Edit the dataset page to be dynamic - add excel link too </li>
-                <li>Clean up about page and put info</li>
-                <li>Upload Your Own Data - Email/Form/Access to upload dataset w/ questions</li>
-                <li>Add partners section</li>
-                <li>Add recent seminar</li>
-                <li>Come up with title???</li>
-            <ul>
-        </li>
-        <li>Reproduce it on own device instead of google colab</li>
-        <li>TODO: look at anaconda</li>
-        <li>TODO: Write abstract for research poster</li>
-    <ul>
-
-    <h3>2/2025</h3>
-    <p>Goal: Train own model using our datasets and fine-tuning our model using limited datasets</p>
-    <p></p>
-
-
-    <h3>Future Implementations</h3>
-    <ul>
-        <li>Datasets -> Interactive Map Feature</li>
-        <li>Dots that mark which places we have datasets for. Click to redirect</li>
-        <li>Have a place for people to submit ther idataset to be added to website</li>
-        <li>Python package</li>
-    </ul>
+    <div class="image-container">
+        <img src="./img/ai1.jpg" alt="bg">
+        <div class="overlay"></div>
+        <a href="/form" class="upload-btn">
+            <button>Upload a Dataset</button>
+        </a>
+        <h2>AI Generated Image</h2>
+    </div>
+    <div class="text">
+        <h1>TBA</h1>
+    </div>
 </main>
+
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100vw;
+        height: 35vw;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    }
+
+    .upload-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        text-decoration: none; 
+    }
+
+    .upload-btn button {
+        padding: 12px 24px;
+        background-color: #60816B;
+        border: none;
+        color: white;
+        font-size: 3rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .upload-btn button:hover {
+        background-color: #468EA6;
+    }
+
+    .image-container h2 {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transform: none;
+        color: white;
+        font-size: 0.5rem;
+        text-align: left;
+        z-index: 2;
+    }
+
+    .text{
+        padding-left: 30px;
+    }
+
+    .container{
+        display: flex;
+    }
+</style>

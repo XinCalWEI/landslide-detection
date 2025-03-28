@@ -7,44 +7,116 @@
     <link rel="stylesheet" href="http://localhost:4000/css/style.css">
 </head>
 <body>
-    <header>
-    <div class="header-container">
-        <h1><a href="http://localhost:4000/">Landslide Detection</a></h1>
-        <nav>
-            <ul>
-                <li><a href="http://localhost:4000/">About</a></li>
-                <li><a href="http://localhost:4000/people">People</a></li>
-                <li><a href="http://localhost:4000/datasets">Datasets</a></li>
-                <li><a href="http://localhost:4000/other">Other</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <head>
+    <link rel="stylesheet" href="../css/header.css">
+</head>
 
+<body>
+    <header>
+        <div class="transparent-header">
+        <div class="header-container">
+            <h1><a href="http://localhost:4000/">Landslide Detection</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:4000/">About</a></li>
+                    <li><a href="http://localhost:4000/people">People</a></li>
+                    <li><a href="http://localhost:4000/datasets">Datasets</a></li>
+                    <li><a href="http://localhost:4000/other">Other</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <script src="../js/header.js"></script>
+</body>
     
     <main>
-        <main>
-    <h1>About Our Project</h1>
-    <h2>TODO</h2>
-    <h3>1/17/2025</h3>
-    <ul>
-        <li>Collect More Refined Datasets (20-30 countries)</li>
-        <li>Dataset Website (description, dropdown with links)</li>
-        <li>Look at tutorial -&gt; reproduce code</li>
-    </ul>
+        <head>
+</head>
 
-    <h3>1/31/2025</h3>
-
-    <h3>2/2025</h3>
-    <p>Goal: Train own model using our datasets and fine-tuning our model using limited datasets</p>
-    <p></p>
-
-    <h3>Future Implementations</h3>
-    <ul>
-        <li>Datasets -&gt; Interactive Map Feature</li>
-        <li>Dots that mark which places we have datasets for. Click to redirect</li>
-    </ul>
+<main>
+    <div class="image-container">
+        <img src="./img/ai1.jpg" alt="bg" />
+        <div class="overlay"></div>
+        <a href="/form" class="upload-btn">
+            <button>Upload a Dataset</button>
+        </a>
+        <h2>AI Generated Image</h2>
+    </div>
+    <div class="text">
+        <h1>TBA</h1>
+    </div>
 </main>
+
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100vw;
+        height: 35vw;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    }
+
+    .upload-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        text-decoration: none; 
+    }
+
+    .upload-btn button {
+        padding: 12px 24px;
+        background-color: #60816B;
+        border: none;
+        color: white;
+        font-size: 3rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .upload-btn button:hover {
+        background-color: #468EA6;
+    }
+
+    .image-container h2 {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transform: none;
+        color: white;
+        font-size: 0.5rem;
+        text-align: left;
+        z-index: 2;
+    }
+
+    .text{
+        padding-left: 30px;
+    }
+
+    .container{
+        display: flex;
+    }
+</style>
+
 
     </main>
 </body>

@@ -32,3 +32,40 @@
     - satelitle images performed better than Unmanned Aerial Vehicles'
   paperInfo: .nan
   title: Chinese Academy of Sciences - Landslide Dataset
+
+- coordX: 3
+  coordY: 5
+  country: China
+  dataResolution: "512\u2009\xD7\u2009512 pixels, Ground\_Resolution is provided in\
+    \ m and varies"
+  datasetDetails: Dataset is subdivided into img, label, and mask
+  description: "\u2022 integrating satellite and unmanned aerial vehicle data from\
+    \ nine regions (specifies region)"
+  inputModel: "- Remote sensing images \n- Ground truth segmentation masks (binary\
+    \ masks where landslide-affected areas are labeled as foreground and non-landslide\
+    \ areas as background)"
+  inventoryType: polygon
+  linkDownload: https://zenodo.org/records/10294997
+  linkPaper: https://www.nature.com/articles/s41597-023-02847-z
+  modelsUsed: '- DeepLabV3+ (using ResNet50 as backbone)
+
+    - U-Net (using ResNet50 as backbone)
+
+    - MFFENet (using ResNet50 as backbone)
+
+    - FCN (Fully Convolutional Network) (using VGG16 as backbone)
+
+    '
+  numLandslideRecords: 20,865 RGB images
+  otherInfo: Integrates satellite and unmanned aerial vehicle (UAV) data for 9 regions
+    [which are separated]. The sensors used in each dataset is specified in the README
+  outputModel: '- segmentation mask separated where each pixel is classified as:
+
+    Foreground (landslide) or Background (non-landslide)
+
+
+    - satelitle images performed better than Unmanned Aerial Vehicles'
+  paperInfo: .nan
+  title: Chinese Academy of Sciences - Landslide Dataset
+
+  

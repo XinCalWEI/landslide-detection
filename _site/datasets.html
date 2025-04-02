@@ -15,7 +15,7 @@
     <header>
         <div class="">
         <div class="header-container">
-            <h1><a href="http://localhost:4000/">Landslide Detection</a></h1>
+            <h1><a href="http://localhost:4000/">GOBLUE</a></h1>
             <nav>
                 <ul>
                     <li><a href="http://localhost:4000/">About</a></li>
@@ -44,12 +44,101 @@
             height: calc(100vh - 60px); 
             width: 100%;
         }
+        #global-dataset-list {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        #global-dataset-list h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        details {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+        }
+        details[open] {
+            background-color: #e0f7fa;  /* Light cyan when dropdown is open */
+        }
+        details summary {
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        details p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        details a {
+            color: #0078A8;
+            text-decoration: none;
+        }
+        details a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <main>
     <!-- Create a container for the map -->
     <div id="map"></div>
+    <!-- Section for listing global datasets -->
+    <section>
+        <div id="global-dataset-list">
+            <h2>Global Datasets</h2>
+            
+                
+                    <details>
+                        <summary><strong>Chinese Academy of Sciences - Landslide Dataset</strong></summary>
+                        <p><strong>Description:</strong> • integrating satellite and unmanned aerial vehicle data from nine regions (specifies region)</p>
+                        <p><strong>Number of Landslide Records:</strong> 20,865 RGB images</p>
+                        <p><strong>Dataset Details:</strong> Dataset is subdivided into img, label, and mask</p>
+                        <p><strong>Landslide Inventory Type:</strong> polygon</p>
+                        
+                            <p><a href="https://zenodo.org/records/10294997">Download Dataset</a></p>
+                        
+                        
+                            <p><a href="https://www.nature.com/articles/s41597-023-02847-z">Read Paper</a></p>
+                        
+                        
+                            <p><strong>Models Used:</strong> - DeepLabV3+ (using ResNet50 as backbone)
+- U-Net (using ResNet50 as backbone)
+- MFFENet (using ResNet50 as backbone)
+- FCN (Fully Convolutional Network) (using VGG16 as backbone)
+</p>
+                        
+                        
+                            <p><strong>Input Model:</strong> - Remote sensing images 
+- Ground truth segmentation masks (binary masks where landslide-affected areas are labeled as foreground and non-landslide areas as background)</p>
+                        
+                        
+                            <p><strong>Data Resolution:</strong> 512 × 512 pixels, Ground Resolution is provided in m and varies</p>
+                        
+                        
+                            <p><strong>Output Model:</strong> - segmentation mask separated where each pixel is classified as:
+Foreground (landslide) or Background (non-landslide)
+
+- satelitle images performed better than Unmanned Aerial Vehicles</p>
+                        
+                        
+                            <p><strong>Other Paper Information:</strong> NaN</p>
+                        
+                        <p><strong>Other Dataset Information:</strong> Integrates satellite and unmanned aerial vehicle (UAV) data for 9 regions [which are separated]. The sensors used in each dataset is specified in the README</p>
+                    </details>
+                
+            
+                
+            
+        </div>
+    </section>
 </main>
 
 <!-- Leaflet.js Map Setup -->
@@ -57,132 +146,59 @@
 
 <script>
     // Initialize map
-    const map = L.map('map').setView([0, 0], 5); // Center of the globe, zoom level 2
+    const map = L.map('map').setView([0, 0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     
-        // Log coordinates to check if data is parsed
-        console.log("Dataset coordinates:", 1, 2);
-
-        const lat = 2;
-        const lon = 1;
         
-        // Create marker for each dataset point
-        const marker = L.marker([lat, lon]).addTo(map);
+    
         
-        // Build popup content dynamically, only including non-empty fields
-        let popupContent = `
-            <strong>Title:</strong> Chinese Academy of Sciences - Landslide Dataset<br>
-            <strong>Description:</strong> • integrating satellite and unmanned aerial vehicle data from nine regions (specifies region)<br>
-            <strong>Country:</strong> Global<br>
-            
-                <a href="https://zenodo.org/records/10294997">Link to Download</a><br>
-            
-            <strong>Number of Landslide Records:</strong> 20,865 RGB images<br>
-            <strong>Dataset Details:</strong> Dataset is subdivided into img, label, and mask<br>
-            <strong>Landslide Inventory Type:</strong> polygon<br>
-            
-                <a href="https://www.nature.com/articles/s41597-023-02847-z">Link to Paper</a><br>
-            
-            
-                <strong>Models Used:</strong> - DeepLabV3+ (using ResNet50 as backbone)
+            const lat = 5;
+            const lon = 3;
+            const marker = L.marker([lat, lon]).addTo(map);
+            let popupContent = `
+                <strong>Title:</strong> Chinese Academy of Sciences - Landslide Dataset<br>
+                <strong>Description:</strong> • integrating satellite and unmanned aerial vehicle data from nine regions (specifies region)<br>
+                <strong>Country:</strong> China<br>
+                
+                    <a href="https://zenodo.org/records/10294997">Link to Download</a><br>
+                
+                <strong>Number of Landslide Records:</strong> 20,865 RGB images<br>
+                <strong>Dataset Details:</strong> Dataset is subdivided into img, label, and mask<br>
+                <strong>Landslide Inventory Type:</strong> polygon<br>
+                
+                    <a href="https://www.nature.com/articles/s41597-023-02847-z">Link to Paper</a><br>
+                
+                
+                    <strong>Models Used:</strong> - DeepLabV3+ (using ResNet50 as backbone)
 - U-Net (using ResNet50 as backbone)
 - MFFENet (using ResNet50 as backbone)
 - FCN (Fully Convolutional Network) (using VGG16 as backbone)
 <br>
-            
-            
-                <strong>Input Model:</strong> - Remote sensing images 
+                
+                
+                    <strong>Input Model:</strong> - Remote sensing images 
 - Ground truth segmentation masks (binary masks where landslide-affected areas are labeled as foreground and non-landslide areas as background)<br>
-            
-            
-                <strong>Data Resolution:</strong> 512 × 512 pixels, Ground Resolution is provided in m and varies<br>
-            
-            
-                <strong>Output Model:</strong> - segmentation mask separated where each pixel is classified as:
+                
+                
+                    <strong>Data Resolution:</strong> 512 × 512 pixels, Ground Resolution is provided in m and varies<br>
+                
+                
+                    <strong>Output Model:</strong> - segmentation mask separated where each pixel is classified as:
 Foreground (landslide) or Background (non-landslide)
 
 - satelitle images performed better than Unmanned Aerial Vehicles<br>
-            
-            
-                <strong>Other Information About the Paper:</strong> NaN<br>
-            
-            <strong>Other Information About the Dataset:</strong> Integrates satellite and unmanned aerial vehicle (UAV) data for 9 regions [which are separated]. The sensors used in each dataset is specified in the README<br>
-        `;
-
-        // Bind the popup to the marker
-        marker.bindPopup(popupContent);
+                
+                
+                    <strong>Other Information About the Paper:</strong> NaN<br>
+                
+                <strong>Other Information About the Dataset:</strong> Integrates satellite and unmanned aerial vehicle (UAV) data for 9 regions [which are separated]. The sensors used in each dataset is specified in the README<br>
+            `;
+            marker.bindPopup(popupContent);
+        
     
 </script>
 
-<!-- For custon marker -->
-<!-- <script>
-    // Initialize map
-    const map = L.map('map').setView([0, 0], 5); // Center of the globe, zoom level 5
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-    // Define a custom icon
-    // const customIcon = L.icon({
-    //     iconUrl: 'path/to/your/icon.png', // Replace with your custom icon URL
-    //     iconSize: [32, 32], // Size of the icon
-    //     iconAnchor: [16, 32], // Point of the icon which will correspond to the marker's location
-    //     popupAnchor: [0, -32], // Point from which the popup will open relative to the icon
-    // });
-
-    
-        // Log coordinates to check if data is parsed
-        console.log("Dataset coordinates:", 1, 2);
-
-        const lat = 2;
-        const lon = 1;
-        
-        // Create marker with custom icon
-        // const marker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
-        
-        // Build popup content dynamically
-        let popupContent = `
-            <strong>Title:</strong> Chinese Academy of Sciences - Landslide Dataset<br>
-            <strong>Description:</strong> • integrating satellite and unmanned aerial vehicle data from nine regions (specifies region)<br>
-            <strong>Country:</strong> Global<br>
-            
-                <a href="https://zenodo.org/records/10294997">Link to Download</a><br>
-            
-            <strong>Number of Landslide Records:</strong> 20,865 RGB images<br>
-            <strong>Dataset Details:</strong> Dataset is subdivided into img, label, and mask<br>
-            <strong>Landslide Inventory Type:</strong> polygon<br>
-            
-                <a href="https://www.nature.com/articles/s41597-023-02847-z">Link to Paper</a><br>
-            
-            
-                <strong>Models Used:</strong> - DeepLabV3+ (using ResNet50 as backbone)
-- U-Net (using ResNet50 as backbone)
-- MFFENet (using ResNet50 as backbone)
-- FCN (Fully Convolutional Network) (using VGG16 as backbone)
-<br>
-            
-            
-                <strong>Input Model:</strong> - Remote sensing images 
-- Ground truth segmentation masks (binary masks where landslide-affected areas are labeled as foreground and non-landslide areas as background)<br>
-            
-            
-                <strong>Data Resolution:</strong> 512 × 512 pixels, Ground Resolution is provided in m and varies<br>
-            
-            
-                <strong>Output Model:</strong> - segmentation mask separated where each pixel is classified as:
-Foreground (landslide) or Background (non-landslide)
-
-- satelitle images performed better than Unmanned Aerial Vehicles<br>
-            
-            
-                <strong>Other Information About the Paper:</strong> NaN<br>
-            
-            <strong>Other Information About the Dataset:</strong> Integrates satellite and unmanned aerial vehicle (UAV) data for 9 regions [which are separated]. The sensors used in each dataset is specified in the README<br>
-        `;
-
-        // Bind the popup to the marker
-        marker.bindPopup(popupContent);
-    
-</script> -->
 
     </main>
 </body>

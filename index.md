@@ -8,7 +8,7 @@ title: About
 
 <main>
     <div class="image-container">
-        <img src="./img/ai1.jpg" alt="bg">
+        <img src="./img/ai4.png" alt="bg">
         <div class="overlay"></div>
         <a href="/form" class="upload-btn">
             <button>Upload a Dataset</button>

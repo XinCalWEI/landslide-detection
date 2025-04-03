@@ -10,10 +10,10 @@ title: About
     <div class="image-container">
         <img src="./img/ai/ai5.png" alt="bg">
         <div class="overlay"></div>
-        <a href="/form" class="upload-btn">
-            <button>Upload a Dataset</button>
+        <a href="{{ '/form' | absolute_url }}" class="upload-btn">
+            <button>Upload Your Own Data</button>
         </a>
-        <h2>AI Generated Image</h2>
+        <!-- <h2>AI Generated Image</h2> -->
     </div>
     <div class="about">
         <h1><span>&mdash;</span> About <span>&mdash;</span></h1>

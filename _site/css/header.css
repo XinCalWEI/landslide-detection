@@ -1,5 +1,5 @@
 header {
-    background-color: #3B3321;
+    background-color: #B08D57;
     color: white;
     position: relative;
 }
@@ -11,6 +11,11 @@ header {
     max-width: 100vw;
     padding-left: 30px;
     padding-right: 20px;
+}
+
+.header-container img{
+    height: 1.5em;
+    width: auto;
 }
 
 /* Transparent header on main page */
@@ -57,27 +62,34 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 15px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a {
-    color: white;
     text-decoration: none;
     position: relative;
     display: inline-block;
 }
 
+/* Default color for links (on '/') */
+nav ul li a.home-link {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Color for links on non-home pages */
+nav ul li a.other-link {
+    color: #1C375F;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for both home and other links */
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: white;
+    background-color: currentColor; /* Uses the current text color (white or blue) */
     left: 0;
     bottom: -2px;
     transition: width 0.3s ease-in-out;

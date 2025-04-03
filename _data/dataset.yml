@@ -33,8 +33,8 @@
   paperInfo: .nan
   title: Chinese Academy of Sciences - Landslide Dataset
 
-- coordX: 3
-  coordY: 5
+- coordX: -106.5348
+  coordY: 38.7946
   country: China
   dataResolution: "512\u2009\xD7\u2009512 pixels, Ground\_Resolution is provided in\
     \ m and varies"

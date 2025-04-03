@@ -16,11 +16,12 @@ title: Datasets
             width: 100%;
         }
         #global-dataset-list {
-            background-color: white;
+            background-color: #7DBA87;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
+            margin-bottom: 30px;
         }
         #global-dataset-list h2 {
             font-size: 2rem;
@@ -29,7 +30,7 @@ title: Datasets
             margin-bottom: 20px;
         }
         details {
-            background-color: #f9f9f9;
+            background-color: #B0C8EC;
             border: 1px solid #ddd;
             margin-bottom: 15px;
             border-radius: 8px;
@@ -113,8 +114,8 @@ title: Datasets
 
     {% for dataset in site.data.dataset %}
         {% if dataset.country != "Global" %}
-            const lat = {{ dataset.coordY }};
-            const lon = {{ dataset.coordX }};
+            const lat = parseFloat({{ dataset.coordY }});
+            const lon = parseFloat({{ dataset.coordX }});
             const marker = L.marker([lat, lon]).addTo(map);
             let popupContent = `
                 <strong>Title:</strong> {{ dataset.title }}<br>

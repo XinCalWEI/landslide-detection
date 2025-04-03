@@ -6,13 +6,18 @@
     <header>
         <div class="{% if page.url == '/' %}transparent-header{% endif %}">
         <div class="header-container">
-            <h1><a href="{{ '/' | absolute_url }}">GOBLUE</a></h1>
+            <h1>
+                <a href="{{ '/' | absolute_url }}">
+                    <img src="{% if page.url == '/' %}./img/transparent.png{% else %}./img/GOBLUE_Transparent.png{% endif %}" 
+                         alt="logo">
+                </a>
+            </h1>
             <nav>
                 <ul>
-                    <li><a href="{{ '/' | absolute_url }}">About</a></li>
-                    <li><a href="{{ '/people' | absolute_url }}">People</a></li>
-                    <li><a href="{{ '/datasets' | absolute_url }}">Datasets</a></li>
-                    <li><a href="{{ '/other' | absolute_url }}">Other</a></li>
+                    <li><a href="{{ '/' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">About</a></li>
+                    <li><a href="{{ '/people' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">People</a></li>
+                    <li><a href="{{ '/datasets' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Datasets</a></li>
+                    <li><a href="{{ '/other' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Other</a></li>
                 </ul>
             </nav>
         </div>

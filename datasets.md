@@ -114,10 +114,11 @@ title: Datasets
 
     {% for dataset in site.data.dataset %}
         {% if dataset.country != "Global" %}
-            const lat = parseFloat({{ dataset.coordY }});
-            const lon = parseFloat({{ dataset.coordX }});
-            const marker = L.marker([lat, lon]).addTo(map);
-            let popupContent = `
+            // Assign lat and lon without redeclaring them
+            var lat = parseFloat("{{ dataset.coordY }}");
+            var lon = parseFloat("{{ dataset.coordX }}");
+            var marker = L.marker([lat, lon]).addTo(map);
+            var popupContent = `
                 <strong>Title:</strong> {{ dataset.title }}<br>
                 <strong>Description:</strong> {{ dataset.description }}<br>
                 <strong>Country:</strong> {{ dataset.country }}<br>

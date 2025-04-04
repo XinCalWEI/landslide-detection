@@ -1,0 +1,78 @@
+---
+layout: default
+title: News
+---
+
+<main>
+    <div class="news-item">
+        <h2>Example for Conference</h2>
+        <span class="date">April 3, 2025</span>
+        <span class="tag conference">Conference</span>
+        <p>Insert link and info</p>
+    </div>
+    <!-- <div class="news-item">
+        <h2>Research Paper Published on Landslides</h2>
+        <span class="date">March 25, 2025</span>
+        <span class="tag research">Research</span>
+        <p>Our latest research paper on landslide prediction has been published in a top journal. Check it out for insights on recent advancements in the field.</p>
+    </div>
+    <div class="news-item">
+        <h2>New Blog Post on Data Science Trends</h2>
+        <span class="date">March 15, 2025</span>
+        <span class="tag blog">Blog</span>
+        <p>Read our latest blog post discussing the emerging trends in data science for 2025. A must-read for aspiring data scientists!</p>
+    </div>
+    <div class="news-item">
+        <h2>Celebrating Achievements of Dr. Jane Doe</h2>
+        <span class="date">March 10, 2025</span>
+        <span class="tag people">People</span>
+        <p>Dr. Jane Doe has made significant contributions to the field of environmental science. Join us in celebrating her achievements and dedication.</p>
+    </div> -->
+</main>
+
+<style>
+    main {
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .news-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #4C4332;
+        padding-bottom: 20px;
+    }
+    .news-item h2 {
+        margin: 0;
+        font-size: 1.8em;
+        color: #333;
+    }
+    .news-item .date {
+        font-size: 0.9em;
+        color: gray;
+    }
+    .tag {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 5px 10px;
+        margin-left: 10px;
+        font-size: 0.9em;
+        border-radius: 5px;
+        color: white;
+    }
+    .tag.conference, .tag.presentation {
+        background-color:rgb(92, 196, 237);
+    }
+    .tag.research, .tag.paper, .tag.project {
+        background-color:rgb(242, 69, 78);
+    }
+    .tag.people {
+        background-color:rgb(227, 146, 39);
+    }
+    .tag.article, .tag.blog {
+        background-color: #7DBA87;
+    }
+    .news-item p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+</style>

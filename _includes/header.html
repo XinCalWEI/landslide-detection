@@ -15,8 +15,10 @@
             <nav>
                 <ul>
                     <li><a href="{{ '/' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">About</a></li>
+                    <li><a href="{{ '/news' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Recent News</a></li>
                     <li><a href="{{ '/people' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">People</a></li>
                     <li><a href="{{ '/datasets' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Datasets</a></li>
+                    <li><a href="{{ '/form' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Upload Your Own Data</a></li>
                     <li><a href="{{ '/other' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Other</a></li>
                 </ul>
             </nav>

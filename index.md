@@ -15,7 +15,7 @@ title: About
         </a>
         <!-- <h2>AI Generated Image</h2> -->
     </div>
-    <div class="about">
+    <div class="title">
         <h1><span>&mdash;</span> About <span>&mdash;</span></h1>
     </div>
     <div class="carousel-container">
@@ -42,6 +42,20 @@ title: About
         <!-- Arrows -->
         <button class="carousel-prev">←</button>
         <button class="carousel-next">→</button>
+    </div>
+    <div class="title">
+        <h1><span>&mdash;</span> Partners <span>&mdash;</span></h1>
+    </div>
+    <div class="image-slider-container">
+        <div class="image-slider-track">
+            <!-- Replace src values with paths to your images -->
+            <img src="./img/partners/aidd-logo.png" alt="Logo 1" />
+            <img src="./img/partners/realize-logo.png" alt="Logo 2" />
+            <img src="./img/partners/cse-logo.png" alt="Logo 3" />
+            <img src="./img/partners/aidd-logo.png" alt="Logo 1 copy" />
+            <img src="./img/partners/realize-logo.png" alt="Logo 2 copy" />
+            <img src="./img/partners/cse-logo.png" alt="Logo 3 copy" />
+        </div>
     </div>
 </main>
 
@@ -166,7 +180,7 @@ title: About
     }
 
     /* About */
-    .about {
+    .title {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -174,13 +188,13 @@ title: About
         margin-top: 20px; 
     }
 
-    .about h1 {
+    .title h1 {
         font-size: 2rem;
         font-weight: bold;
         margin: 0;
     }
 
-    .about h1 span {
+    .title h1 span {
         margin: 0 20px; 
         font-size: 3rem; 
         color: #000; 
@@ -255,6 +269,40 @@ title: About
     .carousel-next {
         right: 10px;
     }
+
+    .image-slider-container {
+        overflow: hidden;
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-slider-track {
+        display: flex;
+        width: max-content;
+        animation: slideLeft 20s linear infinite;
+    }
+
+    .image-slider-track img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        object-position: center;
+        flex-shrink: 0;
+        margin-right: 10px;
+        border-radius: 8px;
+    }
+
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
 </style>
 
 <script>
@@ -312,4 +360,24 @@ title: About
         nextBtn.addEventListener('click', goToNextSection);
         prevBtn.addEventListener('click', goToPreviousSection);
     });
+
+    // Image slider setup
+    (function imageSliderInit() {
+    const track = document.querySelector('.image-slider-track');
+    const container = document.querySelector('.image-slider-container');
+
+    // Duplicate images to ensure seamless loop if not already duplicated
+    if (track.children.length <= 3) {
+        [...track.children].forEach((img) => {
+        track.appendChild(img.cloneNode(true));
+        });
+    }
+
+    // Add an event listener to reset the animation to create a seamless loop
+    track.addEventListener('animationiteration', () => {
+        track.style.animation = 'none';
+        track.offsetHeight; // Trigger reflow to reset animation
+        track.style.animation = 'slideLeft 20s linear infinite';
+    });
+    })();
 </script>

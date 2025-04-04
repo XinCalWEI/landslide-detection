@@ -45,7 +45,7 @@ header {
 
 /* Change background on scroll */
 .scrolled {
-    background-color: rgba(59, 51, 33, 0.9);
+    background-color: rgba(176, 200, 236, 1.1);
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -62,7 +62,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 15px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 nav ul li a {

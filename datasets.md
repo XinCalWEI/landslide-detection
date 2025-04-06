@@ -16,7 +16,7 @@ title: Datasets
             width: 100%;
         }
         #global-dataset-list {
-            background-color: #7DBA87;
+            /* background-color: #7DBA87; */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,8 @@ title: Datasets
             margin-bottom: 20px;
         }
         details {
-            background-color: #B0C8EC;
+            /* background-color: #B0C8EC; */
+            background-color: #F2EFE9;
             border: 1px solid #ddd;
             margin-bottom: 15px;
             border-radius: 8px;
@@ -38,7 +39,9 @@ title: Datasets
             transition: background-color 0.3s ease;
         }
         details[open] {
-            background-color: #e0f7fa;  /* Light cyan when dropdown is open */
+            /* background-color: #e0f7fa; */
+            background-color: #A9D3DE;
+            /* background-color: white; */
         }
         details summary {
             font-size: 1.2rem;

@@ -17,7 +17,7 @@
         <div class="header-container">
             <h1>
                 <a href="http://localhost:4000/">
-                    <img src="./img/GOBLUE_Transparent.png" 
+                    <img src="./img/GOBLUE_T.png" 
                          alt="logo">
                 </a>
             </h1>
@@ -52,7 +52,7 @@
             width: 100%;
         }
         #global-dataset-list {
-            background-color: #7DBA87;
+            /* background-color: #7DBA87; */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -66,7 +66,8 @@
             margin-bottom: 20px;
         }
         details {
-            background-color: #B0C8EC;
+            /* background-color: #B0C8EC; */
+            background-color: #F2EFE9;
             border: 1px solid #ddd;
             margin-bottom: 15px;
             border-radius: 8px;
@@ -74,7 +75,9 @@
             transition: background-color 0.3s ease;
         }
         details[open] {
-            background-color: #e0f7fa;  /* Light cyan when dropdown is open */
+            /* background-color: #e0f7fa; */
+            background-color: #A9D3DE;
+            /* background-color: white; */
         }
         details summary {
             font-size: 1.2rem;
@@ -308,16 +311,38 @@ cross-regional validation was conducted by training and validating models on sei
                             <p><a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.640043/full">Read Paper</a></p>
                         
                         
-                            <p><strong>Models Used:</strong> LHASA 2.0: XGBoost (Machine Learning Model) LHASA 1.1: Decision Tree Model</p>
+                            <p><strong>Models Used:</strong> LHASA 2.0: XGBoost (Machine Learning Model) LHASA 1.1: Decision Tree Model. LHASA 2 provides a nearly real-time view of global landslide hazard for a variety of stakeholders</p>
                         
                         
-                            <p><strong>Input Model:</strong> NaN</p>
+                            <p><strong>Input Model:</strong> LHASA Version 1 – Input Data:
+- Satellite precipitation (7-day rainfall)
+- Static susceptibility map (based on slope, land cover, geology)
+
+LHASA Version 2 – Input Data:
+- Daily precipitation
+- Antecedent rainfall
+- Soil moisture
+- Snow cover/snowmelt
+- Explanatory variables (e.g., slope, land cover, faults)
+- Landslide inventories (GLC + others for training)</p>
                         
                         
-                            <p><strong>Data Resolution:</strong> NaN</p>
+                            <p><strong>Data Resolution:</strong> LHASA v1
+Output Resolution: ~0.1°, every 3 hours
+
+LHASA v2
+Output Resolution: ~0.1°, daily
+
+</p>
                         
                         
-                            <p><strong>Output Model:</strong> NaN</p>
+                            <p><strong>Output Model:</strong> LHASA v1
+- Output: Categorical (High, Moderate, Low hazard)
+
+LHASA v2
+- Output: Probabilistic landslide nowcast (0–1 score)
+
+</p>
                         
                         
                             <p><strong>Other Paper Information:</strong> COOLR (Cooperative Open Online Landslide Repository)
@@ -328,7 +353,7 @@ LHASA (Landslide Hazard Assessment for Situational Awareness)
 - LHASA 2.0: A global nowcasting model combining satellite-based rainfall data with landslide susceptibility factors.
 - LHASA 1.1: A heuristic-based global susceptibility mapping model.</p>
                         
-                        <p><strong>Other Dataset Information:</strong> NaN</p>
+                        <p><strong>Other Dataset Information:</strong> Model is databased not trained on landslides but landslides are used for cooboration of results</p>
                     </details>
                 
             
@@ -596,13 +621,13 @@ the data of aftershocks and other related seismic events that continued to impac
                     <strong>Input Model:</strong> - satelite imagery<br>
                 
                 
-                    <strong>Data Resolution:</strong> Landsat-8 images<br>
+                    <strong>Data Resolution:</strong> Landsat-8 images (15 m)<br>
                 
                 
                     <strong>Output Model:</strong> - mask images to represent the landslide scars as a binary layer<br>
                 
                 
-                    <strong>Other Information About the Paper:</strong> NaN<br>
+                    <strong>Other Information About the Paper:</strong> The study achieved a recall of 0.74, precision of 0.61, and an F1-score of 0.67, outperforming previous methodologies. These results highlight the method's potential for use in dynamic mapping systems for landslide scar identification, supporting the development and continuous updating of landslide scar databases.<br>
                 
                 <strong>Other Information About the Dataset:</strong> NaN<br>
             `;
@@ -623,7 +648,7 @@ the data of aftershocks and other related seismic events that continued to impac
                 
                 <strong>Number of Landslide Records:</strong> 117 Landslide Inventories, 6,000 Landslides<br>
                 <strong>Dataset Details:</strong> An analysis of existing datasets of landslides in Nepal. Does not contain new information or use a model to predict.<br>
-                <strong>Landslide Inventory Type:</strong> polygon, point, raster<br>
+                <strong>Landslide Inventory Type:</strong> polygon, point<br>
                 
                     <a href="https://link.springer.com/article/10.1007/s11069-024-07013-1">Link to Paper</a><br>
                 
@@ -634,13 +659,13 @@ the data of aftershocks and other related seismic events that continued to impac
                     <strong>Input Model:</strong> - N/A (Dataset emphasizes analysis of existing inventories)<br>
                 
                 
-                    <strong>Data Resolution:</strong> resolution varies and is only mentioned for some<br>
+                    <strong>Data Resolution:</strong> Resolution varies and is only mentioned for some.<br>
                 
                 
                     <strong>Output Model:</strong> NaN<br>
                 
                 
-                    <strong>Other Information About the Paper:</strong> Focues on Nepal and analyzes existing databases to see where moe data is needed.<br>
+                    <strong>Other Information About the Paper:</strong> Focues on Nepal and analyzes existing databases to see where more data is needed.<br>
                 
                 <strong>Other Information About the Dataset:</strong> No model used. <br>
             `;
@@ -659,9 +684,9 @@ the data of aftershocks and other related seismic events that continued to impac
                 
                     <a href="https://data.humdata.org/dataset/nepal-landslides-location">Link to Download</a><br>
                 
-                <strong>Number of Landslide Records:</strong> 4 Lanslide Starting Points<br>
+                <strong>Number of Landslide Records:</strong> 4 Landslides<br>
                 <strong>Dataset Details:</strong> The dataset is just a dataset, no training or model.<br>
-                <strong>Landslide Inventory Type:</strong> point<br>
+                <strong>Landslide Inventory Type:</strong> point, polygon<br>
                 
                     <a href="NaN">Link to Paper</a><br>
                 
@@ -669,16 +694,16 @@ the data of aftershocks and other related seismic events that continued to impac
                     <strong>Models Used:</strong> - No model used just Direct Observational Data/Anecdotal Data<br>
                 
                 
-                    <strong>Input Model:</strong> - Direct Observational Data/Anecdotal Data<br>
+                    <strong>Input Model:</strong> - N/A (Direct Observational Data/Anecdotal Data)<br>
                 
                 
-                    <strong>Data Resolution:</strong> NaN<br>
+                    <strong>Data Resolution:</strong> Resolution not clear.<br>
                 
                 
                     <strong>Output Model:</strong> NaN<br>
                 
                 
-                    <strong>Other Information About the Paper:</strong> NaN<br>
+                    <strong>Other Information About the Paper:</strong> No paper associated.<br>
                 
                 <strong>Other Information About the Dataset:</strong> No model used. <br>
             `;
@@ -702,7 +727,7 @@ the data of aftershocks and other related seismic events that continued to impac
                 <strong>Dataset Details:</strong> The dataset is not explicitly divided into training, validation, and testing sets. It serves as an inventory of landslide occurrences rather than a dataset pre-processed for machine learning purposes.<br>
                 <strong>Landslide Inventory Type:</strong> polygon, point<br>
                 
-                    <a href="NaN">Link to Paper</a><br>
+                    <a href="https://www.usgs.gov/data/landslide-inventories-across-united-states-ver-30-february-2025">Link to Paper</a><br>
                 
                 
                     <strong>Models Used:</strong> - No model used just data<br>
@@ -711,7 +736,7 @@ the data of aftershocks and other related seismic events that continued to impac
                     <strong>Input Model:</strong> - N/A (Dataset emphasizes analysis of existing inventories)<br>
                 
                 
-                    <strong>Data Resolution:</strong> NaN<br>
+                    <strong>Data Resolution:</strong> Varies based on the dataset.<br>
                 
                 
                     <strong>Output Model:</strong> NaN<br>
@@ -761,7 +786,7 @@ IKONOS: 1-meter resolution<br>
                 
                     <strong>Other Information About the Paper:</strong> The study area for the Landslides of China's Qinling dataset focuses on the Qinling Mountains in central China, a geologically active and ecologically important region prone to landslides due to its steep terrain, high precipitation, and seismic activity.<br>
                 
-                <strong>Other Information About the Dataset:</strong> No model used.<br>
+                <strong>Other Information About the Dataset:</strong> NaN<br>
             `;
             marker.bindPopup(popupContent);
         
@@ -780,28 +805,28 @@ IKONOS: 1-meter resolution<br>
                 
                     <a href="https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html">Link to Download</a><br>
                 
-                <strong>Number of Landslide Records:</strong> 770, Modified images to add more images to train off of<br>
-                <strong>Dataset Details:</strong> NaN<br>
-                <strong>Landslide Inventory Type:</strong> NaN<br>
+                <strong>Number of Landslide Records:</strong> 770 Images (TripleSat satellite), Used data agumentation to artificially create more datapoints<br>
+                <strong>Dataset Details:</strong> 10% of the dataset is the test set, while the remaining 90% of the training samples are split into training and validation sets at an 8:2 ratio to train diﬀerent network models.<br>
+                <strong>Landslide Inventory Type:</strong> polygon<br>
                 
                     <a href="https://www.researchgate.net/publication/375960858_An_Improved_Faster_R-CNN_Method_for_Landslide_Detection_in_Remote_Sensing_Images">Link to Paper</a><br>
                 
                 
-                    <strong>Models Used:</strong> NaN<br>
+                    <strong>Models Used:</strong> - Faster R-CNN (DarkNet53) (compared against Faster R-CNN (VGG16) and Faster R-CNN (ResNet50)<br>
                 
                 
-                    <strong>Input Model:</strong> NaN<br>
+                    <strong>Input Model:</strong> - High-resolution satellite images <br>
                 
                 
-                    <strong>Data Resolution:</strong> NaN<br>
+                    <strong>Data Resolution:</strong> 0.8 m<br>
                 
                 
-                    <strong>Output Model:</strong> NaN<br>
+                    <strong>Output Model:</strong> - location of landside in photo imagery<br>
                 
                 
                     <strong>Other Information About the Paper:</strong> NaN<br>
                 
-                <strong>Other Information About the Dataset:</strong> NaN<br>
+                <strong>Other Information About the Dataset:</strong> Model was fairly successful, would be interesting to look into it more!<br>
             `;
             marker.bindPopup(popupContent);
         
@@ -825,16 +850,16 @@ IKONOS: 1-meter resolution<br>
                     <a href="https://www.nature.com/articles/s41597-024-03901-0">Link to Paper</a><br>
                 
                 
-                    <strong>Models Used:</strong> - No model, just mapped landslide starting points<br>
+                    <strong>Models Used:</strong> - No model, just mapped landslide points and polygons and visually compared the before and after photos<br>
                 
                 
-                    <strong>Input Model:</strong> - High-resolution satellite images<br>
+                    <strong>Input Model:</strong> NaN<br>
                 
                 
                     <strong>Data Resolution:</strong> The DEM has a 12.5m resolution per pixel. The vector data covers 3,250 km² with 15,383 landslides, averaging 4.7 per km². Landslide areas range from 20 to 120,000 m².<br>
                 
                 
-                    <strong>Output Model:</strong> - Mapped points of all landslide starting points<br>
+                    <strong>Output Model:</strong> NaN<br>
                 
                 
                     <strong>Other Information About the Paper:</strong> The study covers 3,250 km² in Beijing, China. From July 29 to August 2, 2023, extreme rainfall from Typhoon Doksuri triggered 15,383 landslides.<br>
@@ -888,7 +913,7 @@ IKONOS: 1-meter resolution<br>
             var lon = parseFloat("-51.6658");
             var marker = L.marker([lat, lon]).addTo(map);
             var popupContent = `
-                <strong>Title:</strong> Manual Mapping of Landslides fro May 2024 Floods in Brazil<br>
+                <strong>Title:</strong> Manual Mapping of Landslides from May 2024 Floods in Brazil<br>
                 <strong>Description:</strong> NaN<br>
                 <strong>Country:</strong> Brazil<br>
                 
@@ -904,13 +929,13 @@ IKONOS: 1-meter resolution<br>
                     <strong>Models Used:</strong> - No model, just mapped landslide starting points<br>
                 
                 
-                    <strong>Input Model:</strong> - PlanetScope Imagery <br>
+                    <strong>Input Model:</strong> NaN<br>
                 
                 
                     <strong>Data Resolution:</strong> Each pixel is 3m by 3m<br>
                 
                 
-                    <strong>Output Model:</strong> - Mapped points of all landslide starting points<br>
+                    <strong>Output Model:</strong> NaN<br>
                 
                 
                     <strong>Other Information About the Paper:</strong> The study area focuses on Rio Grande do Sul, a state in southern Brazil, where heavy rainfall on April 29, 2024, triggered numerous landslides. The mapping uses PlanetScope imagery to identify landslide initiation points across the region.<br>

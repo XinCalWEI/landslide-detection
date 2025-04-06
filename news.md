@@ -5,29 +5,28 @@ title: News
 
 <main>
     <div class="news-item">
-        <h2>Example for Conference</h2>
-        <span class="date">April 3, 2025</span>
+        <h2>NASA Applied Remote Sensing (ARSET)</h2>
+        <span class="date">March 11, 13, 18, 2025</span>
+        <a href="https://appliedsciences.nasa.gov/get-involved/training/english/arset-landslide-monitoring-and-risk-assessment-using-nasa-earth">Learn More</a>
         <span class="tag conference">Conference</span>
-        <p>Insert link and info</p>
-    </div>
-    <!-- <div class="news-item">
-        <h2>Research Paper Published on Landslides</h2>
-        <span class="date">March 25, 2025</span>
-        <span class="tag research">Research</span>
-        <p>Our latest research paper on landslide prediction has been published in a top journal. Check it out for insights on recent advancements in the field.</p>
-    </div>
-    <div class="news-item">
-        <h2>New Blog Post on Data Science Trends</h2>
-        <span class="date">March 15, 2025</span>
-        <span class="tag blog">Blog</span>
-        <p>Read our latest blog post discussing the emerging trends in data science for 2025. A must-read for aspiring data scientists!</p>
+        <p>A three-part introductory training that covers a number of topics related to landslides, demonstrating a wide variety of NASA Earth science data uses to characterize landslides and their impacts.</p>
+        <p>Part 1: Remote Sensing for Landslide Science and Disaster Planning</p>
+        <p>Part 2: Mapping Landslide Occurrence Using Earth Observations</p>
+        <p>Part 3: Remote Sensing and Landslide Susceptibility</p>
+        <div class="news-images">
+            <img src="./img/news/NASA_Arset.png" alt="NASA ARSET">
+        </div>
     </div>
     <div class="news-item">
-        <h2>Celebrating Achievements of Dr. Jane Doe</h2>
-        <span class="date">March 10, 2025</span>
-        <span class="tag people">People</span>
-        <p>Dr. Jane Doe has made significant contributions to the field of environmental science. Join us in celebrating her achievements and dedication.</p>
-    </div> -->
+        <h2>Jowaria Khan's Presents on Geospatial Foundation Models</h2>
+        <span class="date">February 14, 2025</span>
+        <a href="https://scholar.google.com/citations?user=q6_Cq_cAAAAJ&hl=en">Learn More</a>
+        <span class="tag presentation">Presentation</span>
+        <div class="news-images">
+            <img src="./img/news/2-14-25-img1.jpg" alt="2-12-25">
+            <img src="./img/news/2-14-25-img2.jpg" alt="2-12-25">
+        </div>
+    </div>
 </main>
 
 <style>
@@ -36,9 +35,22 @@ title: News
         padding: 20px;
     }
     .news-item {
-        margin-bottom: 20px;
+        max-width: 100%;
         border-bottom: 1px solid #4C4332;
-        padding-bottom: 20px;
+        padding: 1rem;
+    }
+    .news-images{
+        margin-top: 5px;
+    }
+    .news-images img {
+        height: 300px; 
+        width: auto;
+        object-fit: cover;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        display: inline-block;
+        vertical-align: top;
     }
     .news-item h2 {
         margin: 0;
@@ -48,6 +60,18 @@ title: News
     .news-item .date {
         font-size: 0.9em;
         color: gray;
+    }
+    .news-item p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+    .news-item a {
+        color: #0078A8;
+        text-decoration: none;
+    }
+    .news-item a:hover {
+        text-decoration: underline;
     }
     .tag {
         display: inline-block;
@@ -69,10 +93,5 @@ title: News
     }
     .tag.article, .tag.blog {
         background-color: #7DBA87;
-    }
-    .news-item p {
-        font-size: 1em;
-        line-height: 1.6;
-        margin-top: 10px;
     }
 </style>

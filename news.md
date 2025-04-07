@@ -2,6 +2,9 @@
 layout: default
 title: News
 ---
+<head>
+  <link rel="stylesheet" href="{{ '/css/news.css' | absolute_url }}">
+</head>
 
 <main>
     <div class="news-item">
@@ -32,66 +35,6 @@ title: News
 <style>
     main {
         margin: 0 auto;
-        padding: 20px;
-    }
-    .news-item {
-        max-width: 100%;
-        border-bottom: 1px solid #4C4332;
         padding: 1rem;
-    }
-    .news-images{
-        margin-top: 5px;
-    }
-    .news-images img {
-        height: 300px; 
-        width: auto;
-        object-fit: cover;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        display: inline-block;
-        vertical-align: top;
-    }
-    .news-item h2 {
-        margin: 0;
-        font-size: 1.8em;
-        color: #333;
-    }
-    .news-item .date {
-        font-size: 0.9em;
-        color: gray;
-    }
-    .news-item p {
-        font-size: 1em;
-        line-height: 1.6;
-        margin-top: 10px;
-    }
-    .news-item a {
-        color: #0078A8;
-        text-decoration: none;
-    }
-    .news-item a:hover {
-        text-decoration: underline;
-    }
-    .tag {
-        display: inline-block;
-        margin-top: 5px;
-        padding: 5px 10px;
-        margin-left: 10px;
-        font-size: 0.9em;
-        border-radius: 5px;
-        color: white;
-    }
-    .tag.conference, .tag.presentation {
-        background-color:rgb(92, 196, 237);
-    }
-    .tag.research, .tag.paper, .tag.project {
-        background-color:rgb(242, 69, 78);
-    }
-    .tag.people {
-        background-color:rgb(227, 146, 39);
-    }
-    .tag.article, .tag.blog {
-        background-color: #7DBA87;
     }
 </style>

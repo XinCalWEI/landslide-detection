@@ -4,6 +4,7 @@ title: About
 ---
 
 <head>
+  <link rel="stylesheet" href="{{ '/css/news.css' | absolute_url }}">
 </head>
 
 <main>
@@ -87,9 +88,31 @@ title: About
             </a>
         </div>
     </div>
+    <div class="title">
+        <a href="{{ '/news' | absolute_url }}">Recent News</a>
+    </div>
+    <div class="containter">
+        <div class="news-item">
+            <h2>NASA Applied Remote Sensing (ARSET)</h2>
+            <span class="date">March 11, 13, 18, 2025</span>
+            <a href="https://appliedsciences.nasa.gov/get-involved/training/english/arset-landslide-monitoring-and-risk-assessment-using-nasa-earth">Learn More</a>
+            <span class="tag conference">Conference</span>
+            <p>A three-part introductory training that covers a number of topics related to landslides, demonstrating a wide variety of NASA Earth science data uses to characterize landslides and their impacts.</p>
+        </div>
+        <div class="news-item">
+            <h2>Jowaria Khan's Presents on Geospatial Foundation Models</h2>
+            <span class="date">February 14, 2025</span>
+            <a href="https://scholar.google.com/citations?user=q6_Cq_cAAAAJ&hl=en">Learn More</a>
+            <span class="tag presentation">Presentation</span>
+        </div>
+    </div>
 </main>
 
 <style>
+    .container{
+        padding-top: -10px;
+        padding-left: 1rem;
+    }
     .image-container {
         position: relative;
         display: inline-block;
@@ -220,10 +243,22 @@ title: About
         margin-bottom: 20px;
     }
 
+    .title a{
+        color: #000000;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem 0 0;
+        text-decoration: none;
+    }
+
+    .title a:hover{
+        text-decoration: underline;
+    }
+
     .title h1 {
         font-size: 2rem;
         font-weight: bold;
-        margin: 20px 0 0;
+        margin: 1rem 0 0;
     }
 
     .title h1 span {
@@ -352,7 +387,7 @@ title: About
         padding-right: 10px;
         gap: 10px;
         /* width: max-content; */
-        animation: slideLeft 20s linear infinite;
+        animation: slideLeft 15s linear infinite;
     }
 
     .image-slider-track img {

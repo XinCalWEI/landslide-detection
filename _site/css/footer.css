@@ -1,0 +1,23 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem 1rem;
+}
+
+.site-header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #B0C8EC;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.site-logo {
+    height: 40px;
+    width: auto;
+}
+
+  

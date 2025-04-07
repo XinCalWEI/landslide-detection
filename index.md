@@ -55,6 +55,9 @@ title: About
     <div class="image-slider-container">
         <div class="image-slider-track">
             <!-- Replace src values with paths to your images -->
+            <a href="https://girlsencoded.eecs.umich.edu/">
+                <img src="./img/partners/girls_encoded.png" alt="Logo 6" />
+            </a>
             <a href="https://disasterdata.engin.umich.edu/">
                 <img src="./img/partners/aidd-logo.png" alt="Logo 1" />
             </a>
@@ -71,6 +74,9 @@ title: About
                 <img src="./img/partners/MAECenter.png" alt="Logo 5" />
             </a>
             <!-- Copies -->
+            <a href="https://girlsencoded.eecs.umich.edu/">
+                <img src="./img/partners/girls_encoded.png" alt="Logo 6" />
+            </a>
             <a href="https://disasterdata.engin.umich.edu/">
                 <img src="./img/partners/aidd-logo.png" alt="Logo 1" />
             </a>

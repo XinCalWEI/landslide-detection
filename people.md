@@ -14,8 +14,9 @@ title: People
                 <img src="img/people/Reiko Chen-2.jpg" alt="Reiko Chen">
                 <div class="staff-description">
                     <h2>Reiko Chen</h2>
-                    <h3>Founder</h3>
-                    <p>Reiko is an undergraduate at the University of Michigan studying Computer Science.</p>
+                    <h3>Founder, Web Developer</h3>
+                    <p>Reiko is an undergraduate at the University of Michigan studying Computer Science who is currently exploring different topics in computer science including web development and machine learning.
+                    </p>
                     <a href="mailto:reikoc@umich.edu" class="email-button">
                         <i class="fa fa-envelope"></i> reikoc@umich.edu
                     </a>

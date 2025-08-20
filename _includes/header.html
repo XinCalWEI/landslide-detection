@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="{{ '/css/header.css' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/css/header.css' | relative_url }}">
 </head>
 
 <body>
@@ -7,19 +7,19 @@
         <div class="{% if page.url == '/' %}transparent-header{% endif %}">
         <div class="header-container">
             <h1>
-                <a href="{{ '/' | absolute_url }}">
+                <a href="{{ '/' | relative_url }}">
                     <img src="{% if page.url == '/' %}./img/transparent.png{% else %}./img/GOBLUE_T.png{% endif %}" 
                          alt="logo">
                 </a>
             </h1>
             <nav>
                 <ul>
-                    <li><a href="{{ '/' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">About</a></li>
-                    <li><a href="{{ '/news' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Recent News</a></li>
-                    <li><a href="{{ '/people' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">People</a></li>
-                    <li><a href="{{ '/datasets' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Datasets</a></li>
-                    <li><a href="{{ '/form' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Upload Your Own Data</a></li>
-                    <li><a href="{{ '/other' | absolute_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Other</a></li>
+                    <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">About</a></li>
+                    <li><a href="{{ '/news' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Recent News</a></li>
+                    <li><a href="{{ '/people' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">People</a></li>
+                    <li><a href="{{ '/datasets' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Datasets</a></li>
+                    <li><a href="{{ '/form' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Upload Your Own Data</a></li>
+                    <li><a href="{{ '/other' | relative_url }}" class="{% if page.url == '/' %}home-link{% else %}other-link{% endif %}">Other</a></li>
                 </ul>
             </nav>
         </div>
